@@ -1,0 +1,33 @@
+.warning {
+    margin-top: 68px;
+    background-color: #F4CF1B;
+    padding: 3px 13px;
+
+
+
+    &_info {
+        width: 85%;
+        text-align: center;
+        margin: auto;
+
+        h3 {
+            color: $cbf;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        &_para1 {
+            padding: 0 10px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1.8;
+
+        }
+
+        &_para2 {
+            padding: 0 15px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+    }
+}

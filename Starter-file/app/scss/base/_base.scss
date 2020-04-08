@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+
+a {
+    text-decoration: none;
+}

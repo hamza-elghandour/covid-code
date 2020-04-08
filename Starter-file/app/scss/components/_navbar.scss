@@ -1,0 +1,45 @@
+.navbar {
+    background: url(../images/back.png) no-repeat center/cover;
+    background-color: $cbb;
+    width: 100%;
+    //  background-color: ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 1em;
+    position: fixed;
+    top: 0;
+
+
+    &_logo {
+        margin-right: auto;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 5px;
+
+
+        a {
+            color: $cbf;
+
+        }
+
+
+    }
+
+    &_button {
+        margin: 0 16px;
+
+        button {
+            background-color: $cbb;
+            color: white;
+            border-color: $cbf;
+            border-radius: 5px;
+            padding: 0 5px;
+            border-width: 1px;
+
+        }
+    }
+
+}

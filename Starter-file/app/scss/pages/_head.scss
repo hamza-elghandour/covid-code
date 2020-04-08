@@ -1,0 +1,47 @@
+.head {
+    text-align: center;
+    margin-top: 20px;
+
+    &_test {
+        &_title1 {
+            color: $cbf;
+            font-size: 18px;
+
+            margin-bottom: -5px;
+        }
+
+        &_title2 {
+            color: $cbf;
+            font-size: 18px;
+            margin: 0 50px 15px 50px;
+            line-height: 1.5;
+            padding: 0 60px;
+
+            span {
+                color: white;
+            }
+
+        }
+
+        p {
+            color: grey;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 20px 30px;
+        }
+
+        button {
+            width: 327px;
+            height: 49px;
+            font-weight: 700;
+            font-size: 26px;
+            color: white;
+            background: url(../images/vole.png) no-repeat center/COVER;
+
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 40px;
+
+        }
+    }
+}
