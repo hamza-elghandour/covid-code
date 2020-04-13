@@ -1,5 +1,15 @@
+@import 'utils/mixins';
+
+
+
+
+
 @import 'base/base';
 @import 'utils/variables';
 @import 'components/navbar';
 @import 'layouts/warning';
 @import 'pages/head';
+@import 'layouts/symptomes';
+@import 'layouts/recommandations';
+@import 'layouts/test';
+@import 'layouts/footer';

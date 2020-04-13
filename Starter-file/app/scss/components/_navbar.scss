@@ -10,14 +10,61 @@
     position: fixed;
     top: 0;
 
+    @include tablet1 {
+        height: 92px;
+        font-size: 20px;
+
+    }
+
+    @include desktop {
+        height: 92px;
+        font-size: 20px;
+    }
+
 
     &_logo {
         margin-right: auto;
+
+        @include tablet1 {
+            width: 67px;
+            margin-left: 20px;
+
+        }
+
+        @include desktop {
+            width: 67px;
+            margin-left: 20px;
+
+        }
+    }
+
+    ul {
+        margin-right: 20px;
+        font-weight: bold;
+
+        @include tablet1 {
+            font-size: 20px;
+            margin-right: 20px;
+
+        }
     }
 
     li {
         display: inline-block;
         padding: 0 5px;
+
+        @include tablet1 {
+            font-size: 20px;
+            margin-right: 20px;
+
+        }
+
+        @include desktop {
+            font-size: 20px;
+            margin-right: 50px;
+
+        }
+
 
 
         a {
