@@ -1,0 +1,131 @@
+.proteger {
+
+    margin-top: 20px;
+
+    h1 {
+
+        text-align: center;
+
+        color: #1078AD;
+
+        font-size: 1.87rem;
+
+        margin-top: 20px;
+        // text-align: center;
+        color: $cbf;
+    }
+
+    &_first {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 80px;
+
+        margin-right: 70px;
+
+        &_one {
+
+
+            margin-top: 30px;
+        }
+
+        &_3 {
+            margin-top: 20px;
+        }
+
+        h3 {
+
+            font-size: 1.125rem;
+
+            color: #1078AD;
+
+            text-align: center;
+
+        }
+
+
+
+        img {
+
+            margin: 0 auto;
+
+            display: block;
+
+
+
+
+
+        }
+    }
+
+
+
+
+    &_second {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 40px;
+
+        margin-right: 70px;
+
+        h3 {
+
+            font-size: 1.125rem;
+
+            color: #1078AD;
+
+            text-align: center;
+
+        }
+
+
+
+        img {
+            display: block;
+            margin-left: 40px;
+
+
+        }
+
+
+
+
+    }
+
+    &_home {
+
+
+
+        margin-top: 3.125rem;
+
+        margin-bottom: 3.125rem;
+
+
+
+        h3 {
+
+            font-size: 1.125rem;
+
+            color: #1078AD;
+
+            text-align: center;
+
+            margin-top: 1.25rem;
+
+        }
+
+
+
+        img {
+
+            margin: 0 auto;
+
+            display: block;
+
+        }
+
+    }
+
+
+}
