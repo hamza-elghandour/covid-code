@@ -30,7 +30,7 @@ const imagemin = require('gulp-imagemin');
 
 var replace = require('gulp-replace');
 
-
+const minify = require('gulp-minify')
 
 
 
@@ -79,7 +79,7 @@ function jsTask() {
 
         .pipe(concat('script.js'))
 
-        .pipe(uglify())
+        .pipe(minify())
 
         .pipe(dest('src/js'));
 

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/acceuil.css?cb=1589082082084">
+
+    <title>test</title>
+</head>
+
+<body>
+    <section>
+        <div class="navbar">
+            <img src="./images/logo__sante.png" alt="" class="navbar_logo">
+            <nav>
+                <ul>
+                    <li><a href="conseils.html">Conseil</a></li>
+                    <li><a href="">Accueil</a></li>
+
+                </ul>
+            </nav>
+            <a class="navbar_button" href="#"> <button>عربي<i class="fas fa-globe"></i></button></a>
+        </div>
+        <section class="warning">
+            <div class="warning_info">
+                <h3>la dernière info medicale</h3>
+                <div class="warning_info_all">
+                    <p class="warning_info_all_para1">La prise d'anti-inflammatoires (ibuprofène, cortisone ...)
+                        pourrait
+                        être
+                        un
+                        facteur
+                        d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol.
+                    </p>
+                    <p class="warning_info_all_para2">N'arrêtez pas votre traitement ! Consultez votre médecin ou
+                        votre
+                        pharmacien.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <section>
+                <h1>accueil</h1>
+                <input id="demmarer" type="button" value="demmarer" onclick="start()" />
+            </section>
+
+            <section id="questionnaire" style="display: none;">
+
+                <div class="inline_block" style=" width: 700px; box-align: center;">
+                    <!-- <input class ="s" name="yes" id="yesRadio" type="radio" value ='yes' />
+                                <label id ="yes">yes</label>
+                                <input class ="s" name="no" id="noRadio" type="radio" value ="no" />
+                                <label id ="no">no</label> -->
+                    <!-- <div id="avancement" style ="width: 500px; height: 20px; display: flex;   ">
+                                <div id = "courbeGauche" style="background-color: black; width: 3%; height: inherit;float:left; border-radius: 50% 0% 0% 50%; float:left "></div>
+                                <div id ="donePerc" style ="background-color: black;margin: 0px; width: 45%; height: inherit;display: inline-block;" ></div>
+                                <div id="notDonePerc" style ="background-color: lightblue; margin:0px ;height: inherit; display: inline-block; "></div>
+                                <div id = "courbeDroite" style="background-color:lightblue; margin: 0px; width: 3%; height: inherit;display: inline-block; border-radius: 0% 50% 50% 0%;"></div>
+                           
+                        </div>  -->
+
+                    <ul id="avancement" style="width: 500px; height: 20px; display: flex; list-style-type: none;">
+                        <li
+                            style="background-color: black; width: 3%; height: inherit; border-radius: 50% 0% 0% 50%; float: left;">
+                        </li>
+                        <li id="donePerc"
+                            style="background-color: black;margin: 0px; width: 45%; height: inherit;float:left "></li>
+                        <li id="notDonePerc"
+                            style="background-color: lightblue; margin:0px ;height: inherit;float: left; "></li>
+                        <li id="rondDroit"
+                            style="background-color:lightblue; margin: 0px; width: 3%; height: inherit;border-radius: 0% 50% 50% 0%;float: left; ">
+                        </li>
+                    </ul>
+
+
+                    <form id="myForm" method="POST">
+
+
+
+                        <h2 id="questionDuFormulaire" name="questionBody">Question 1</h2>
+                        <br>
+
+                        <div class="data" id="yes-no">
+                            <label id="yes">yes</label>
+                            <input class="finalData radio" name="radioB" id="radio-yes" type="radio" value='yes'
+                                onclick="checkProgress()" />
+                            <br>
+
+
+
+                            <label id="no">no</label>
+                            <input class="finalData radio" name="radioB" id="radio-no" type="radio" value='no'
+                                onclick="checkProgress()" />
+                            <br>
+                        </div>
+
+
+
+                        <div class="data" id="radioX4" style="display: none;">
+                            <label id="champ1">champ1</label>
+                            <input class="finalData radio" name="radio4" id="radio4_1" type="radio" value='champ1'
+                                onclick="checkProgress()" />
+                            <br>
+
+                            <label id="champ2">champ2</label>
+                            <input class="finalData radio" name="radio4" id="radio4_2" type="radio" value='champ2'
+                                onclick="checkProgress()" />
+                            <br>
+
+                            <label id="champ3">champ3</label>
+                            <input class="finalData radio" name="radio4" id="radio4_3" type="radio" value='champ3'
+                                onclick="checkProgress()" />
+                            <br>
+
+                            <label id="champ4">champ4</label>
+                            <input class="finalData radio" name="radio4" id="radio4_4" type="radio" value='champ4'
+                                onclick="checkProgress()" />
+                            <br>
+
+
+                        </div>
+
+
+                        <div class="data" id="radioX3" style="display: none;">
+
+
+                            <label id="champ1">yes</label>
+                            <input class="finalData radio" name="radio3" id="radio3_1" type="radio" value='champ1'
+                                onclick="checkProgress()" />
+                            <br>
+
+                            <label id="champ2">no</label>
+                            <input class="finalData radio" name="radio3" id="radio3_2" type="radio" value='champ2'
+                                onclick="checkProgress()" />
+                            <br>
+
+                            <label id="champ3_3">champ3</label>
+                            <input class="finalData radio" name="radio3" id="radio3_3" type="radio" value='champ3'
+                                onclick="checkProgress()" />
+                            <br>
+
+                        </div>
+
+
+                        <div class="data" id="champsText1-2" style="display: none;">
+
+                            <label id="champText1" name="champText1">champText1</label>
+                            <input id="inputText" class="finalData text" type="text" name="champText" required
+                                oninput="error1()" />
+                            <p id="errorMessage" style="display:block;">veuillez saisir les infos</p>
+
+                        </div>
+                        <!-- <input id ="one" name="age" id="age" type="text" />
+                                <input name="age" id="age" type="text" /> -->
+
+                        <div class="block">
+
+                            <!--                 <button id ="submitB"  value="next" onclick="myFunction()" > <input class="inline" type="reset" value="previous" /> </button>
+                    -->
+                            <input id="previousB" type="button" value="previous" onclick="myPreviousFunction()" />
+                            <input id="nextB" type="button" value="next" onclick="myNextFunction()" disabled />
+
+                            <input id="Resultats" type="submit" style="display: none;" value="sub" />
+
+
+
+                        </div>
+                </div>
+                </form>
+                </div>
+
+            </section>
+
+
+            <section id="resultats" style="display:none;">
+                <h2>Merci pour le temps que vous nous avez accordé</h2>
+                <input id="result" type="button" value="resultats" onclick="getResults()" />
+                <p>vos resultats sont prets , il suffit de cliquer </p>
+                <p id="resultatsFinaux"></p>
+
+                <p id="resultatsFinaux2"></p>
+
+                <p id="resultatsFinaux3"></p>
+
+            </section>
+
+        </section>
+        <section class="recommandations">
+            <h3>Recommandations officielles</h3>
+            <div class="recommandations_textapp">
+                <div class="recommandations_textapp_text">
+                    <p class="recommandations_textapp_text_parra1"> <span>Si vous pensez être malade, <br></span>
+                        évitez les endroits publics.</p>
+                    <p class="recommandations_textapp_text_parra2">Ne rendez pas visite aux personnes fragiles.</p>
+                    <p class="recommandations_textapp_text_parra3">Évitez de sortir de chez vous</p>
+                    <p class="recommandations_textapp_text_parra4">Respectez les mesures barrière (lavage de main,
+                        masque).
+                    </p>
+                    <p class="recommandations_textapp_text_parra5">Surveillez vos symptômes, l’évolution de votre
+                        température
+                    </p>
+                </div>
+                <div class="recommandations_textapp_app">
+                    <p class="recommandations_textapp_app_p1">Apple Gratuit</p>
+                    <p class="recommandations_textapp_app_p2">080 100 47 47</p>
+                    <P class="recommandations_textapp_app_p3"> www.sante.gov.ma</P>
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="test">
+            <h3>Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?</h3>
+            <img src="./images/1f637.png" alt="">
+
+            <button>Demarer le test</button>
+
+        </section>
+        <footer class="foot">
+            <img src="./images/logo__sante.png" alt="">
+
+            <div class=foot_maincontact>
+                <div class="foot_maincontact_main">
+
+
+                    <ul class="foot_maincontact_main_ul">
+                        <a class="foot_maincontact_main_ul_a" href="#"> <button>عربي<i
+                                    class="fal fa-globe"></i></button></a>
+                        <li class="foot_maincontact_main_ul_li"><a href="">Conseil</a></li>
+                        <li class="foot_maincontact_main_ul_li1"><a href="">Accueil</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="foot_maincontact_contact">
+                    <h3>Contacts utiles</h3>
+                    <P>Chiffre économique "Alo épidémie vigilance"</P>
+                    <P> <span> 080 100 47 47</span></P>
+                    <P>Aide médicale urgente</P>
+                    <P> <span> 114</span> </P>
+
+                </div>
+
+            </div>
+            <div class="foot_para">
+                <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur
+                    au 22/03/2020 à 16h15. Ce site d’information n’est pas un dispositif médical,
+                    il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance
+                    Digitale contre le COVID-19 : @maladiecovid19 </p>
+            </div>
+
+
+        </footer>
+        <div class="end">
+
+        </div>
+
+
+
+    </section>
+    <script src="js/script.js" async></script>
+</body>
+
+</html>

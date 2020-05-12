@@ -19,6 +19,12 @@
 
 }
 
+@mixin symp {
+    @media (min-width: 320px)and (max-width: 1020px) {
+        @content ;
+    }
+}
+
 // @mixin tablet {
 //     @media (min-width : $medium) and (max-width : $large) {
 //         @content ;
