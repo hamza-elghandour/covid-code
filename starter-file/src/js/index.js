@@ -363,7 +363,7 @@ function barre(i) {
     var OFof = Math.trunc(89 - i / questions * 89).toString();
     document.getElementById('donePerc').style.width = ONon + "%";
     document.getElementById('notDonePerc').style.width = OFof + "%";
-    console.log(ONon + " khraaaa");
+    console.log(ONon + " hfhfhf");
 
     //document.querySelector('#donePerc').style.width = ONon+"%" ; 
 }
@@ -500,7 +500,7 @@ function myNextFunction() {
 
     console.log(counter);
     stock(counter);
-    console.log("9hab" + answer);
+
     decide(counter);
     console.log('*******************' + counter + "*****" + answer + "*******" + stay + "****" + tabData[1][0])
     refreshCounter(stay);
@@ -512,10 +512,6 @@ function myNextFunction() {
 
     //}
     if (counter == 10) document.getElementById('nextB').removeAttribute("disabled");
-
-    console.log(counter);
-    console.log(tabData);
-    console.log("***");
 
     //} else{document.getElementById('nextB').removeAttribute("disabled") ; }
 
@@ -549,7 +545,7 @@ function myPreviousFunction() {
     if (counter == 10) document.getElementById('nextB').removeAttribute("disabled");
     document.getElementById('errorMessage').textContent = ""
 
-    console.log(counter);
+
 }
 
 //******************************************** */
