@@ -1,8 +1,4 @@
 
-
-
-
-
 // ********************** fonctions necessaires pour initialiser nos variables ***************
 
 function getColonne(i) { // prend le nombre de colonne qu'on doit reserver a chaque question 
@@ -53,14 +49,6 @@ for (let index = 0; index < tabData.length; index++) {  // dans chaque ligne on 
     tabData[index] = new Array(getColonne(index));
 }
 // ********************************************************************************************
-
-
-
-
-
-
-
-
 
 //<----------------------------------- BLOCK REFRESH : MODIFICATION DU CONTENU HTML --------------------------------------->
 
@@ -113,47 +101,6 @@ function displayNoneDivs(i) { // applique un display : "none" s'il le faut
         divList.item(index).style.display = (displayList[index] == 0) ? "none" : "block";  // on applique un display : "none" si il y'a un "0" dans la case correspondante a la div data
         // on a utilisé l'operateur ternaire "?" qui prend en entré une condition et donne deux resultat selon si la condition est réalisée ou pas 
     }
-
-
-    // voici plusieurs syntaxe pour la ligne 102 
-
-    // methode 1 : basique 
-    /*
-        function getNone(n){
-            if (n==0) {
-                return "none" ; 
-            }else{
-                return "block" ; 
-            }
-        }
-        
-        divList.item(index).style.display = getNone(displayList[index])
-
-
-    */
-
-    // methode 2 : lambda expression
-
-    /**
-     *  divList.item(index).style.display = () =>  if (displayList[index]==0) {
-                return "none" ; 
-            }else{
-                return "block" ; 
-            } ; 
-     * 
-     */
-
-
-    /** methode 3 : 
-     * 
-     *  document.querySelectorAll('data').item(index).style.display = (displayList[index]==0)? "none" : "block" ; 
-     * 
-     * 
-     * 
-     */
-
-
-
 }
 
 // ******************************************************************
@@ -376,7 +323,7 @@ function controlSection(i) {
     if (counter < 1) a = [1, 0, 0];
     if (counter <= questions && counter >= 1) a = [0, 1, 0];
     if (counter > questions) a = [0, 0, 1];
-    let listSections = document.querySelectorAll('section');
+    let listSections = document.querySelectorAll('.walou');
     for (let index = 0; index < a.length; index++) {
         listSections.item(index).style.display = (a[index] == 0) ? "none" : "block";
     }
@@ -384,13 +331,7 @@ function controlSection(i) {
 }
 
 function checkProgress() {
-    // var b = 0 ; 
-    // let a = document.querySelectorAll('input') ; 
-    // a.forEach(element => { if (element.checked) b= 1 ;
-    // });
-    // if (counter ==0) b = 1 ;
-    // if (b==0 ) document.getElementById('nextB').setAttribute("disabled","") ;
-    // console.log(b) ; 
+
 
     document.getElementById('nextB').removeAttribute("disabled");
 }
@@ -567,133 +508,19 @@ function setResultHTML(text) {
 }
 
 function getResults() {
-    // for (let index = 11; index < tabData.length; index++) {
-    //     var c = 0 ; 
-    //     if(tabData[index][0]) c ++ ; 
-    // }
 
-
-    // let fievre = (tabData[1][0] || tabData[1][2]); 
-    // let noFievre = tabData[1][1] ; 
-    // let basseFievre = (tabData[1][6]) ;   
-    // let hauteFievre = (tabData[1][5]) ; 
-    // let toux = tabData[2][0];
-    // let noToux = tabData[2][1];
-    // let courbatures = tabData[3][0] ; 
-    // let noCourbatures = tabData[3][1] ; 
-    // let malGorge = tabData[4][0] ; 
-    // let noMalGorge = tabData[4][1] ; 
-    // let fatigue = tabData[6][0] ; 
-    // let noFatigue = tabData[6][1] ; 
-    // let malaise = tabData[9][0]; 
-    // let noMalaise = tabData[9][1] ; 
-    // let gene = tabData[8][0] ; 
-    // let noGene = tabData[8][1] ; 
-    // let diffAlim = tabData[7][0] ; 
-    // let noDiffAlim = tabData[7][1] ; 
-    // let age = parseInt(tabData[11][0].toString()) ; 
-    // let diarrhee = tabData[5][0] ; 
-    // let noDiarrhee = tabData[5][1] ;
-
-
-
-    // var decision ="" ; 
-    // facPro = (c > 0 ) ;
-    // if (tabData[1][0] || (tabData[2][0] && tabData[4][0]) || (tabData[2][0] && tabData[3][0])) {
-    //     if (basseFievre || tabData[8][0] || tabData[7][0]) {
-    //         decision = 'veuillez appeler le numéro 141';
-    //     } else if (
-    //         ( c > 0 &&
-    //             tabData[8][1] &&
-    //             tabData[7][1] &&
-    //             !basseFievre &&
-    //             ((hauteFievre && fatigue && malaise) ||
-    //                 (hauteFievre && fatigue) ||
-    //                 (fatigue && malaise) ||
-    //                 (hauteFievre && malaise))) ||
-    //         (facPro && !gene && !diffAlim && !basseFievre && hauteFievre && !fatigue && !malaise) ||
-    //         (facPro && !gene && !diffAlim && !basseFievre && fatigue && !hauteFievre && !malaise) ||
-    //         (facPro && !gene && !diffAlim && !basseFievre && malaise && !hauteFievre && !fatigue)
-    //     ) {
-    //         decision= 'veuillez appeler le numéro 141';
-    //     } else if (facPro && !hauteFievre && !fatigue && !malaise && !gene && !diffAlim && !basseFievre) {
-    //         decision =
-    //             'téléconsultation ou médecin généraliste ou visite à domicile ';
-    //         decision +=
-    //             'appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent';
-    //     } else if (
-    //         (age > 50 &&
-    //             age <= 69 &&
-    //             (!facPro && !hautFievre && !fatigue && !malaise && !gene && !diffAlim && !basseFievre)) ||
-    //         (!facPro && !basseFievre && !gene && !diffAlim && (hauteFievre || fatigue || malaise))
-    //     ) {
-    //         decision =
-    //             'téléconsultation ou médecin généraliste ou visite à domicile ';
-    //         decision +=
-    //             'appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent';
-    //     } else if (
-    //         age < 50 &&
-    //        !facPro &&
-    //         !hauteFievre &&
-    //         !fatigue &&
-    //         !malaise &&
-    //         !gene &&
-    //         !diffAlim &&
-    //         !basseFievre
-    //     ) {
-    //         decision=
-    //             'nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes';
-    //     } else {
-    //         decision=
-    //             'Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la   situation.   Pour   toute information concernant   le   Covid-19 allez vers la page d’accueil.';
-    //     }
-    // } else if (
-    //     (fievre && !toux && noDiarrhee) ||
-    //     (noFievre && toux && noMalGorge && noCourbatures) ||
-    //     (noFievre && noToux && malGorge) ||
-    //     (noToux && courbatures) ||
-    //     (noFievre && diarrhee)
-    // ) {
-    //     if (noHauteFievre && noFatigue && noMalaise && noGene && noDiffAlim && noBasseFievre) {
-    //         decision =
-    //             'Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute.';
-    //     } else if (
-    //         (noFacPro && noGene && noDiffAlim && !basseFievre && hauteFievre && noFatigue && noMalaise) ||
-    //         (noFacPro && noGene && noDiffAlim && !basseFievre && fatigue &&!hauteFievre && noMalaise) ||
-    //         (noFacPro && noGene && noDiffAlim && !basseFievre && malaise && !hauteFievre && noFatigue) ||
-    //         (facPro && noGene && noDiffAlim && !basseFievre && noMalaise && !hauteFievre && noFatigue)
-    //     ) {
-    //         decision =
-    //             'Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141. ';
-    //     } else {
-    //         decision =
-    //             'Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la   situation.   Pour   toute information concernant   le   Covid-19 allez vers la page d’accueil.';
-    //     }
-    // }
-
-    // ********************************************************
     let fievre = (tabData[1][0] || tabData[1][2]);
-    // let noFievre = tabData[1][1] ; 
-    // let basseFievre = (tabData[1][6]) ;   
-    // let hauteFievre = (tabData[1][5]) ; 
+
     let toux = tabData[2][0];
-    // let noToux = tabData[2][1];
+
     let courbatures = tabData[3][0];
-    // let noCourbatures = tabData[3][1] ; 
+
     let malGorge = tabData[4][0];
-    // let noMalGorge = tabData[4][1] ; 
-    // let fatigue = tabData[6][0] ; 
-    // let noFatigue = tabData[6][1] ; 
-    // let malaise = tabData[9][0]; 
-    // let noMalaise = tabData[9][1] ; 
-    // let gene = tabData[8][0] ; 
-    // let noGene = tabData[8][1] ; 
-    // let diffAlim = tabData[7][0] ; 
-    // let noDiffAlim = tabData[7][1] ; 
+
     let age = parseInt(tabData[11][0]);
     let diarrhee = tabData[5][0];
-    // let noDiarrhee = tabData[5][1] ;
-    //
+
+
     var decision2 = "";
     var decision = "";
     var add = false;

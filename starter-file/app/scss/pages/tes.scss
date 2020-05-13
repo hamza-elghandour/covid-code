@@ -1,0 +1,148 @@
+.walou {
+
+    background-color: #96C5DC;
+    ;
+
+    text-align: center;
+
+    padding: 0.5em 1em;
+
+    width: 70%;
+
+    margin: 0 auto;
+
+    border-radius: 1em;
+
+    h1 {
+
+        color: #1078AD;
+
+        font-size: 1.3rem;
+
+    }
+
+    hr {
+
+        width: 60%;
+
+        border-color: yellow;
+
+        margin: 0 auto;
+
+    }
+
+    &_top {
+
+        padding: 0 2em 1em;
+
+        font-weight: 700;
+
+        line-height: 1.6em;
+
+        font-size: 0.8em;
+
+    }
+
+    &_bottom {
+
+        font-weight: 700;
+
+        line-height: 1.6em;
+
+        font-size: 0.8em;
+
+        padding: 1em 2em 2em;
+
+    }
+
+}
+
+
+#resultats {
+    margin: 1;
+
+}
+
+.bar {
+
+    width: 60%;
+
+    height: 0.4em;
+
+    margin: 0 auto;
+
+    border-radius: 1em;
+
+    background-color: #1078AD;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 4em;
+
+    margin-top: 2.5rem;
+
+    &_info {
+
+        border-radius: 50%;
+
+        background-color: #1078AD;
+
+        width: 0.8em;
+
+        height: 0.8em;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-direction: column;
+
+        span {
+
+            margin-top: 4em;
+
+            font-size: 0.8rem;
+
+        }
+
+        .circle {
+
+            background-color: #1078AD;
+
+            width: 2em;
+
+            height: 2em;
+
+            z-index: 0;
+
+            position: absolute;
+
+            display: none;
+
+            border-radius: 50%;
+
+            .mini-circle {
+
+                border-radius: 50%;
+
+                background-color: yellow;
+
+                width: 0.8em;
+
+                height: 0.8em;
+
+                margin: 0.6em;
+
+            }
+
+        }
+
+    }
+
+}

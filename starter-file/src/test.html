@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/acceuil.css?cb=1589266056552">
+    <link rel="stylesheet" href="css/acceuil.css?cb=1589333085434">
 
     <title>test</title>
 </head>
@@ -16,7 +16,7 @@
             <nav>
                 <ul>
                     <li><a href="conseils.html">Conseil</a></li>
-                    <li><a href="">Accueil</a></li>
+                    <li><a href="acceuil.html">Accueil</a></li>
 
                 </ul>
             </nav>
@@ -41,13 +41,76 @@
             </div>
         </section>
         <section>
+            <div class="bar">
 
-            <section>
-                <h1>accueil</h1>
+                <div class="bar_info">
+
+                    <div class="circle">
+
+                        <div class="mini-circle"></div>
+
+                    </div>
+
+                    <span>Informations</span>
+
+                </div>
+
+                <div class="bar_info">
+
+                    <div class="circle">
+
+                        <div class="mini-circle"></div>
+                    </div>
+
+                    <span>Questionnaire</span>
+
+                </div>
+
+                <div class="bar_info">
+
+                    <div class="circle">
+
+                        <div class="mini-circle"></div>
+                    </div>
+
+                    <span>Résultats</span>
+
+                </div>
+
+            </div>
+        </section>
+        <section>
+
+
+            <section class="walou">
+                <h1>Préambule</h1>
+
+                <div class="preambule_top">
+
+                    L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour
+                    contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant
+                    l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des
+                    informations et contenus mis à disposition dans cette application, ou leur adéquation à des
+                    finalités particulières, ne sont pas garantis.
+
+                </div>
+
+                <hr>
+
+                <div class="preambule_bottom">
+
+                    L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire
+                    donné par votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans
+                    chaque cas particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de
+                    manière autonome sur la base de l’information scientifique et clinique pertinente, de la notice
+                    officielle du produit concerné le cas échéant et en cas de doute, en consultant un médecin
+                    compétent.
+
+                </div>
                 <input id="demmarer" type="button" value="demmarer" onclick="start()" />
             </section>
 
-            <section id="questionnaire" style="display: none;">
+            <section id="questionnaire" style="display: none;" class="walou">
 
                 <div class="inline_block" style=" width: 700px; box-align: center;">
                     <!-- <input class ="s" name="yes" id="yesRadio" type="radio" value ='yes' />
@@ -175,7 +238,7 @@
             </section>
 
 
-            <section id="resultats" style="display:none;">
+            <section id="resultats" style="display:none;" class="walou">
                 <h2>Merci pour le temps que vous nous avez accordé</h2>
                 <input id="result" type="button" value="resultats" onclick="getResults()" />
                 <p>vos resultats sont prets , il suffit de cliquer </p>
@@ -263,7 +326,7 @@
 
 
     </section>
-    <script src="js/script.js" async></script>
+    <script src="js/index.js" async></script>
 </body>
 
 </html>
